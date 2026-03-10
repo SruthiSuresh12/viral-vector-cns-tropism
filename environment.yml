@@ -1,0 +1,33 @@
+name: aav-tropism
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10
+  - pip
+  - numpy>=1.24
+  - pandas>=2.0
+  - scikit-learn>=1.3
+  - matplotlib>=3.7
+  - seaborn>=0.12
+  - jupyter
+  - ipython
+
+  # PyTorch (CPU build — GPU optional)
+  - pytorch>=2.0
+  - cpuonly  # Remove this line and install pytorch-cuda for GPU
+
+  - pip:
+    # ESM-2 from Meta AI
+    - fair-esm>=2.0.0
+    # Bioinformatics
+    - biopython>=1.81
+    # UMAP
+    - umap-learn>=0.5.3
+    # Interpretability
+    - captum>=0.6.0
+    # Utils
+    - tqdm>=4.65.0
+    - requests>=2.28.0

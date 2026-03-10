@@ -1,0 +1,15 @@
+name,cns,peripheral,broad,bbb,top_label
+AAV1,0.644,0.988,0.94,0.004,peripheral
+AAV2,0.174,0.994,0.94,0.0,peripheral
+AAV3B,0.052,1.0,0.23,0.002,peripheral
+AAV4,0.076,1.0,0.26,0.0,peripheral
+AAV5,0.262,1.0,0.964,0.008,peripheral
+AAV6,0.044,0.996,0.806,0.002,peripheral
+AAV7,0.75,0.992,0.954,0.04,peripheral
+AAV8,0.272,0.982,0.828,0.242,peripheral
+AAV9,0.766,0.976,0.848,0.738,peripheral
+AAV-PHP.eB,0.924,0.098,0.042,0.958,bbb
+AAV-PHP.B,0.936,0.15,0.064,0.968,bbb
+AAV-BR1,0.786,0.338,0.076,0.794,bbb
+AAV-F,0.934,0.814,0.09,0.91,cns
+AAV-LK03,0.258,0.826,0.076,0.29,peripheral
