@@ -1,7 +1,6 @@
 # Viral Vector CNS Tropism Predictor
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![ESM-2](https://img.shields.io/badge/Model-ESM--2-green.svg)](https://github.com/facebookresearch/esm)
 
 **Protein language model-based prediction of CNS tropism and blood-brain barrier penetration from AAV capsid sequences.**
@@ -14,7 +13,7 @@ Adeno-associated virus (AAV) vectors are the leading platform for CNS gene thera
 
 This tool addresses the *capsid selection problem*: given a novel or modified AAV capsid sequence, predict its likely tropism profile (CNS, peripheral, or broad) and BBB-crossing capability *before* committing to expensive in vivo validation. The approach combines:
 
-1. **ESM-2 sequence embeddings** (Meta AI, *Science* 2023) — state-of-the-art protein language model capturing deep evolutionary and structural context from sequence alone
+1. **ESM-2 sequence embeddings**  — state-of-the-art protein language model capturing deep evolutionary and structural context from sequence alone
 2. **Multi-label tropism classifier** trained on curated serotype–phenotype data from the literature
 3. **Mutational scanning / in silico saturation mutagenesis** to produce residue-level functional maps of capsid surface
 4. **Interpretability via gradient attribution** (captum) to identify which sequence positions drive tropism predictions
@@ -59,7 +58,7 @@ viral-vector-cns-tropism/
 │   ├── 04_mutational_scanning.ipynb
 │   └── 05_predict_novel_capsid.ipynb
 ├── results/
-│   ├── figures/                 # All manuscript-quality output figures
+│   ├── figures/                
 │   └── predictions/             # Per-serotype scores, scanning maps
 ├── tests/
 │   └── test_pipeline.py
@@ -199,33 +198,5 @@ The model also successfully recovers known engineering logic: mutations that inc
 - Mouse PHP.eB tropism does not translate to primates; the model is trained primarily on rodent phenotype data and may not generalize to human/NHP contexts.
 - Structural features (pore geometry, receptor binding pocket) are not yet integrated; this is a sequence-only model.
 
----
-
-## Citation
-
-If you use this tool, please cite:
-
-```bibtex
-@software{aav_tropism_predictor_2025,
-  title={Viral Vector CNS Tropism Predictor},
-  author={[Your Name]},
-  year={2025},
-  url={https://github.com/yourusername/viral-vector-cns-tropism}
-}
-```
-
-And the ESM-2 paper:
-```bibtex
-@article{lin2023evolutionary,
-  title={Evolutionary-scale prediction of atomic-level protein structure with a language model},
-  author={Lin, Zeming et al.},
-  journal={Science},
-  year={2023}
-}
-```
 
 ---
-
-## License
-
-MIT License. See [LICENSE](LICENSE).
